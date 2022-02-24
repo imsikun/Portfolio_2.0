@@ -7,10 +7,6 @@ function App() {
       <Navbar />
       <Header />
       <About />
-      {/* <Work />
-      <Skills />
-      <Testimonials />
-      <Footer /> */}
     </div>
   );
 }
