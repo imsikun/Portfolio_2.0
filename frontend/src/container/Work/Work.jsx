@@ -34,7 +34,6 @@ const Work = () => {
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWorks(data);
-      console.log(data);
     });
   }, []);
 
@@ -44,17 +43,19 @@ const Work = () => {
         My creative <span>Portfolio</span> Section
       </h2>
       <div className='app__work-filter'>
-        {['UI/UX', 'WebApp', 'ReactJs', 'Next.js', 'All'].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${
-              activeFilter === item ? 'item-active' : ''
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {['UI/UX', 'Web App', 'ReactJs', 'Next.js', 'All'].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__work-filter-item app__flex p-text ${
+                activeFilter === item ? 'item-active' : ''
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
 
       <motion.div
